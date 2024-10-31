@@ -1,0 +1,81 @@
+@font-face {
+    font-family:"geauxfont";
+    src: url(../font/Richardson\ Brand\ Revolution\ Block.otf)
+}
+
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    font-family:"geauxfont";
+    background-color:#ffffff;
+}
+.background-image{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/background-light.png);
+    background-size: cover;
+    background-position: center;
+    animation: flicker 7s forwards;
+}
+@keyframes flicker {
+    0%, 14%, 28%, 42%, 56%, 70%, 84% {
+        opacity: 1;
+    }
+    7%, 21%, 35%, 49%, 63%, 77%, 91% {
+        opacity: 0;
+    }
+}
+.geaux-tigers-text{
+    position: absolute;
+    width: 100%;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1;
+}
+@keyframes fadein {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+.geaux-tigers-text video{
+    position:absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    visibility:hidden;
+    animation: fadein 1.5s forwards;
+    animation-delay: 6.5s;
+}
+
+.geaux-tigers-text h1{
+    position: relative;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-color:white;
+    font-size: 40vh;
+    text-align:center;
+    color:#461D7C;
+    line-height: 1;
+    mix-blend-mode:screen;
+    visibility:hidden;
+    animation: fadein 1.5s forwards;
+    animation-delay: 6.5s;
+}
